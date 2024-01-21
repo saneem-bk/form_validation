@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/validation_style.css">
+</head>
+<body>
+  <div class="form-container" id="signup-form">
+    <br><br><br><br><br><br><br>
+    <h2>Sign-Up</h2>
+    <form action="success.html">
+    
+      <p>
+        <label for="username">Username<input id="username" type="text" placeholder="Enter your User-Name" onkeyup="validateName()"></label>
+        <span id="username-error"></span>
+      </p>
+      <p>
+        <label for="email">Email<input id="email" type="text" placeholder="Enter your E-mail" onkeyup="validateEmail()"></label>
+        <span id="email-error"></span>
+      </p>
+      <p>
+        <label for="password">Password<input id="password" type="password" placeholder="Enter Password" onkeyup="validatePassword();checkPasswordStrength(this.value)"></label>
+        <span id="password-error"></span><br>
+        <div id="passwordStrength">
+          <div id="strengthFill"></div>
+        </div>
+        <div id="strengthText">
+          Strength: None
+        </div>
+      </p>
+      <p>
+        <label for="repeat">Repeat Password<input id="repeat" type="password" placeholder="Enter Password again" onkeyup="validateRepeat()"></label>
+        <span id="repeat-error"></span>
+      </p>
+      <p>
+        <label for="age">Age<input id="age" type="text" placeholder="Your Age"></label>
+      </p>
+      <p>
+        <label for="region">Region<input id="Region" type="text" placeholder="Region"></label>
+      </p>
+      <button id="signUp" type="submit" onclick="return validateForm()">Sign-Up</button>
+      <span id="signUp-error"></span>
+    </form> 
+    
+  </div>
+  <div class="form-container" id="signin-form">
+    <h2>Sign-In</h2>
+    <form action="TECH_BLOG.HTML">
+        <p>
+            <label for="username">Username<input id="loginUsername" type="text" placeholder="Enter User-Name" onkeyup="validateLogInName()"></label>
+            <span id="login-error"></span>
+        </p>
+        <p>
+            <label for="email">Email<input id="loginEmail" type="text" placeholder="Enter your E-mail" onkeyup="validateLogInEmail()"></label>
+            <span id="loginEmail-error"></span>
+        </p>
+        <p>
+            <label for="password">Password<input id="logInPassword" type="password" placeholder="Enter your Password" onkeyup="validateLogInPassword()"></label>
+            <span id="loginPassword-error"></span>
+        </p>
+        <button id="signIn" type="submit">Sign-In</button>
+    </form>
+  </div>
+  <script src="script/validation script.js"></script>
+</body>
+</html>
